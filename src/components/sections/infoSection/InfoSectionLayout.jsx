@@ -14,7 +14,7 @@ export default function InfoSectionLayout() {
           />
         </div>
         <div className="bg-zinc-50 absolute h-2/3 w-5/6 md:w-4/6 lg:w-3/6 flex items-center z-20">
-          <h2 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-zinc-600 sm:leading-relaxed lg:leading-relaxed">
+          <h2 className="px-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-zinc-600 leading-relaxed md:leading-relaxed lg:leading-relaxed">
             I Love to Make Beautiful Websites
           </h2>
         </div>
