@@ -1,7 +1,7 @@
 import React from "react";
-import placeholder from "../../../../assets/images/placeholder.png";
+import placeholder from "../../../assets/images/placeholder.png"
 
-export default function ProjectsCardsLayout() {
+export default function ProjectsSectionLayout() {
   return (
     <section className="bg-zinc-100 py-12 md:py-44 flex flex-col items-center md:flex md:flex-row md:items-start">
       <div className="shrink-0 mx-6 md:mx-12">
