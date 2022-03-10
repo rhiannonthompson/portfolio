@@ -4,7 +4,7 @@ import Message from "./Message";
 
 export default function InfoSectionLayout() {
   return (
-    <section className="bg-zinc-50 pb-20 lg:pb-28 relative">
+    <section className="bg-zinc-50 pb-16 relative">
       <div className="grid grid-cols-5 relative">
         <BackgroundImage />
         <Message />

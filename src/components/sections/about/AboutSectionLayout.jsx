@@ -2,10 +2,10 @@ import React from "react";
 
 export default function AwardsLayout() {
   return (
-    <section className="bg-zinc-50 py-56">
+    <section className="bg-zinc-50 py-44">
       <div className="max-w-xl lg:max-w-2xl m-auto text-zinc-600">
         <div className="flex flex-col justify-center items-center px-8">
-          <div className="bg-yellow-500 rounded-full p-6 mb-20">
+          <div className="bg-yellow-500 rounded-full p-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-32 w-32"
@@ -19,15 +19,17 @@ export default function AwardsLayout() {
               />
             </svg>
           </div>
-          <h4 className="pb-2 uppercase text-xl md:text-2xl text-zinc-600 tracking-wider border-b-2 border-yellow-500 opacity-90">
-            Quote About Me
-          </h4>
-          <p className="mt-4 lg:mt-6 italic text-md md:text-lg text-center font-medium lg:font-normal leading-relaxed lg:leading-relaxed">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-            deleniti? Aperiam reprehenderit, enim tradus capitom redunalasious
-            maiores exercitationem ut totam minus quo quaerat aut quis
-            perspiciatis nihil!"
-          </p>
+          <div className="flex flex-col justify-center items-center mt-14">
+            <h4 className="pb-2 uppercase text-xl md:text-2xl text-zinc-600 tracking-wider border-b-2 border-yellow-500 opacity-90">
+              Quote About Me
+            </h4>
+            <p className="mt-4 lg:mt-6 italic text-md md:text-lg text-center font-medium lg:font-normal leading-relaxed lg:leading-relaxed">
+              "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Suscipit, deleniti? Aperiam reprehenderit, enim tradus capitom
+              redunalasious maiores exercitationem ut totam minus quo quaerat
+              aut quis perspiciatis nihil!"
+            </p>
+          </div>
         </div>
       </div>
     </section>

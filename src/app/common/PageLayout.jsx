@@ -4,9 +4,8 @@ import NavLayout from "./navigation/NavLayout";
 import HeaderSectionLayout from "../../components/home/HeaderSectionLayout";
 import InfoSectionLayout from "../../components/sections/infoSection/InfoSectionLayout";
 import ProjectsSectionLayout from "../../components/sections/projects/ProjectsSectionLayout";
-import AboutSectionLayout from "../../components/sections/about/AboutSectionLayout"
+import AboutSectionLayout from "../../components/sections/about/AboutSectionLayout";
 import FooterLayout from "../../components/footer/FooterLayout";
-
 
 export default function PageLayout() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -25,16 +24,17 @@ export default function PageLayout() {
           toggleMenuActive={handleToggleMenuActive}
         />
 
-        <HeaderSectionLayout
-          toggleMenuActive={handleToggleMenuActive}
-        />
+        <HeaderSectionLayout toggleMenuActive={handleToggleMenuActive} />
       </div>
-      <InfoSectionLayout/>
 
-      <div className={isMenuActive && "hidden"}>
+      <div className={`${isMenuActive && "lg:hidden"}`}>
+        <InfoSectionLayout />
+      </div>
+
+      <div className={`${isMenuActive && "hidden"}`}>
         <ProjectsSectionLayout />
         <AboutSectionLayout />
-        <FooterLayout/>
+        <FooterLayout />
       </div>
     </div>
   );
