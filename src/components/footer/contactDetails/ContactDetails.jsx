@@ -8,7 +8,10 @@ import PhoneSVG from '../../../app/common/svgs/PhoneSVG'
 export default function ContactDetails() {
   return (
     <div className="flex flex-col justify-center md:justify-start md:items-start md:flex-grow md:m-0">
-    <div className="flex py-3">
+      <div className="flex mb-6">
+        <h4 className='text-zinc-50 pb-2 border-b border-yellow-500 uppercase'>My Details</h4>
+    </div>
+      <div className="flex py-3">
       <div className="pr-3">
         <LocationSVG />
       </div>
@@ -37,9 +40,6 @@ export default function ContactDetails() {
       <p className="hover:text-yellow-500 underline cursor-pointer">
         My Resumé
       </p>
-    </div>
-    <div className="flex my-12">
-      <LogoBtn />
     </div>
   </div>
   )

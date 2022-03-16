@@ -31,7 +31,7 @@ export default function ContactFormLayout() {
         required
       />
 
-      <button className="py-2 px-12 w-fit mt-4 rounded-sm bg-yellow-500 text-zinc-800 font-bold uppercase tracking-wider">
+      <button className="py-2 px-12 w-fit mt-4 rounded-md bg-yellow-500 text-zinc-800 font-bold uppercase tracking-wider">
         Send
       </button>
     </form>

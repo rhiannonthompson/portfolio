@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NavLayout from "./navigation/NavLayout";
 import HeaderSectionLayout from "../../components/home/HeaderSectionLayout";
@@ -9,6 +9,15 @@ import FooterLayout from "../../components/footer/FooterLayout";
 
 export default function PageLayout() {
   const [isMenuActive, setIsMenuActive] = useState(false);
+
+  const scrollRef = useRef(null);
+
+  const scrollToElement = () =>
+    scrollRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
 
   function handleToggleMenuActive() {
     setIsMenuActive(!isMenuActive);
@@ -23,8 +32,10 @@ export default function PageLayout() {
           isMenuActive={isMenuActive}
           toggleMenuActive={handleToggleMenuActive}
         />
-
-        <HeaderSectionLayout toggleMenuActive={handleToggleMenuActive} />
+        <HeaderSectionLayout
+          toggleMenuActive={handleToggleMenuActive}
+          scrollToElement={scrollToElement}
+        />
       </div>
 
       <div className={`${isMenuActive && "lg:hidden"}`}>
@@ -32,7 +43,12 @@ export default function PageLayout() {
       </div>
 
       <div className={`${isMenuActive && "hidden"}`}>
-        <ProjectsSectionLayout />
+        <div className="py-24 lg:py-44 bg-zinc-50" >
+          <div ref={scrollRef}>
+            <ProjectsSectionLayout />
+          </div>
+        </div>
+
         <AboutSectionLayout />
         <FooterLayout />
       </div>
