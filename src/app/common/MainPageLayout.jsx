@@ -1,14 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NavLayout from "./navigation/NavLayout";
 import HeaderSectionLayout from "../../components/home/HeaderSectionLayout";
 import InfoSectionLayout from "../../components/sections/infoSection/InfoSectionLayout";
-import ProjectsSectionLayout from "../../components/sections/projects/ProjectsSectionLayout";
+import ProjectsSectionLayout from "../../components/sections/projectsSection/ProjectsSectionLayout";
 import AboutSectionLayout from "../../components/sections/about/AboutSectionLayout";
 import FooterLayout from "../../components/footer/FooterLayout";
 
-export default function PageLayout() {
-  const [isMenuActive, setIsMenuActive] = useState(false);
+export default function MainPageLayout({handleToggleMenuActive, isMenuActive}) {
 
   const scrollRef = useRef(null);
 
@@ -19,9 +18,6 @@ export default function PageLayout() {
       inline: "start",
     });
 
-  function handleToggleMenuActive() {
-    setIsMenuActive(!isMenuActive);
-  }
 
   isMenuActive ? disableBodyScroll(document) : enableBodyScroll(document);
 

@@ -1,21 +1,21 @@
 import React, {useState} from "react";
 
-export default function HeaderLayout({toggleMenuActive}) {
+export default function HeaderLayout({toggleMenuActive, headerStyles}) {
   
   const [isOpen, setIsOpen] = useState(false);
-  const genericHamburgerLine = `h-0.5 w-6 my-1 rounded-full bg-zinc-50 transition ease transform duration-300`;
+  const genericHamburgerLine = `${headerStyles.burgerLineColor} h-0.5 w-6 my-1 rounded-full transition ease transform duration-300`;
   
   return (
-    <header className="flex justify-between items-center tracking-tight ">
+    <header className={`flex justify-between items-center tracking-tight`}>
       <div className="bg-yellow-500 rounded-full py-4 px-2 md:py-8 md:px-5">
-        <p className="text-zinc-600 uppercase font-bold md:text-xl">logo</p>
+        <p className={`${headerStyles.logoTextColor} uppercase font-bold md:text-xl`}>logo</p>
       </div>
       <div className="flex group hover:text-yellow-500"
         onMouseLeave={() => setIsOpen(false)}
         onMouseEnter={() => setIsOpen(true)}
       >
         <button
-          className={`px-2 uppercase text-md md:text-xl hover:text-yellow-500 tracking-wider`}
+          className={`${headerStyles.menuButtonTextColor} px-2 uppercase text-md md:text-xl hover:text-yellow-500 tracking-wider`}
           onClick={toggleMenuActive}
         >
           Menu
